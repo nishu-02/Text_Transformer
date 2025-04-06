@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Text Transformer Result</title>
+  <style>
+    body {
+      background: #f1f5f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      color: #1e293b;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #0f172a;
+      margin-bottom: 20px;
+    }
+
+    .result-box {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .result-box h2 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .result-box p {
+      white-space: pre-wrap;
+      font-size: 1.1rem;
+      color: #334155;
+    }
+
+    .char-count {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #475569;
+    }
+
+    .back-link {
+      margin-top: 30px;
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .back-link:hover {
+      color: #1e40af;
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ Text Transformation Result</h1>
+  <div class="result-box">
+    <h2>Transformed Text:</h2>
+    <p>{{ analyzed_text }}</p>
+
+    {% if charcount %}
+      <div class="char-count">{{ charcount }}</div>
+    {% endif %}
+  </div>
+
+  <a class="back-link" href="/">← Go back</a>
+</body>
+</html>

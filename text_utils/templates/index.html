@@ -1,12 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>the template is working fine bitch</p>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Transformer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 min-h-screen">
+    <div class="max-w-3xl mx-auto py-12 px-6">
+      <h1 class="text-4xl font-extrabold text-center text-purple-700 drop-shadow mb-4">
+        Welcome to the Text Transformer
+      </h1>
+      <p class="mb-8 text-center text-lg text-gray-700">
+        ✨ Transform your text however you want — remove extra spaces, capitalize it all, clean newlines,
+        count characters, or get rid of punctuation. We've got you covered.
+      </p>
+
+      <form action="/analyze" method="get" class="bg-white p-8 rounded-2xl shadow-lg">
+        <label for="text" class="block mb-3 text-lg font-semibold text-gray-800">Enter your text:</label>
+        <textarea
+          name="text"
+          id="text"
+          class="w-full h-36 p-4 border border-gray-300 rounded-lg resize-none focus:ring-2 focus:ring-purple-400 mb-6"
+          placeholder="Type your text here..."></textarea>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+          <div class="flex items-center space-x-2">
+            <input type="checkbox" name="removepunc" id="removepunc" class="accent-purple-600" />
+            <label for="removepunc" class="text-purple-700 font-medium">Remove Punctuations</label>
+          </div>
+          <div class="flex items-center space-x-2">
+            <input type="checkbox" name="capitalize" id="capitalize" class="accent-pink-600" />
+            <label for="capitalize" class="text-pink-700 font-medium">Capitalize All Letters</label>
+          </div>
+          <div class="flex items-center space-x-2">
+            <input type="checkbox" name="removenewlines" id="removenewlines" class="accent-indigo-600" />
+            <label for="removenewlines" class="text-indigo-700 font-medium">Remove Newlines</label>
+          </div>
+          <div class="flex items-center space-x-2">
+            <input type="checkbox" name="removespaces" id="removespaces" class="accent-blue-600" />
+            <label for="removespaces" class="text-blue-700 font-medium">Remove Extra Spaces</label>
+          </div>
+          <div class="flex items-center space-x-2">
+            <input type="checkbox" name="charcount" id="charcount" class="accent-green-600" />
+            <label for="charcount" class="text-green-700 font-medium">Character Count</label>
+          </div>
+        </div>
+
+        <button type="submit"
+          class="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold px-6 py-3 rounded-lg shadow hover:from-purple-600 hover:to-pink-600 transition">
+          🚀 Transform
+        </button>
+      </form>
+    </div>
+  </body>
 </html>
